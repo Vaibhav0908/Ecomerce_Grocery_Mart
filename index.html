@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/grocery16.jpg">
+    <title>Ecommerce Grocery Mart Project</title>
+    <link rel="stylesheet" href="links/style.css">
+    <link rel="stylesheet" href="links/bootstrap.min.css">
+    <link rel="stylesheet" href="../../FrontEnd/CSS/css/all.min.css">
+    <script src="links/jquery-3.7.1.min.js"></script>
+    <script src="links/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="modal fade form">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#" method="post">
+                        <button class="btn login pr-3"><b>LOGIN</b></button>
+                        <button class="btn register"><b>REGISTER</b></button>
+                        <a href="#" class="close" data-dismiss="modal">&times;</a><br>
+                        <input type="text" placeholder="Name" class="mt-4 mb-0 name icon_bg night_mode" required><br>
+                        <input type="email" placeholder="Email Address" class="mt-0 mb-3 email1 icon_bg night_mode"
+                            required><br>
+                        <input type="password" placeholder="Password" class="mb-3 password icon_bg night_mode"
+                            required><br>
+                        <input type="password" placeholder="Confirm Password"
+                            class="mb-3 confirm_password icon_bg night_mode" required>
+                        <button class="btn pl-5 pr-5 mt-3 text-white signin"><b>SIGN IN</b></button>
+                        <button class="btn pl-5 pr-5 mt-4 text-white signin create_account"><b>CREATE
+                                ACCOUNT</b></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal packet_content_prod">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <a href="#" class="close" data-dismiss="modal" style="margin-left: 95%;">&times;</a>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4 m-0 pl-5">
+                            <img src="images/grocery11.png" alt="" width="100%">
+                        </div>
+                        <div class="col-8 pl-5">
+                            <h2 class="text-danger ">Ladies Finger 500g</h2>
+                            <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris
+                                nisi ut
+                                aliquip ex ea
+                                commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse
+                                cillum
+                                dolore eu fugiat nulla <br>pariatur.</p>
+                            <p class="m-0 p-0" style="cursor: pointer;"><span
+                                    class="text-primary">&star;&star;&star;</span><span
+                                    class="text-muted">&star;&star;</span>
+                            </p>
+                            <p class=""><span class=""
+                                    style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                                &nbsp;
+                                <big class="add_price"><b><i>$302</i></b></big>
+                            </p>
+                            <div><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                    To
+                                    Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="form ">
+        <form method="post">
+            <div class="text-right close"><a href="#" class="text-muted"
+                    style="text-decoration: none;font-size: 30px;">&Cross;</a></div>
+            <button class="btn  login"><b>LOGIN</b></button>
+            <button class="btn  register"><b>REGISTER</b></button>
+            <input type="text" placeholder="Name" class="name icon_bg mt-4 night_mode">
+            <input type="email" placeholder="Email Address" class="mb-3 mt-3 email icon_bg night_mode">
+            <input type="password" placeholder="Password" class="mb-3 password icon_bg night_mode">
+            <input type="password" placeholder="Confirm Password" class="mb-3 confirm_password icon_bg night_mode">
+            <button class="btn pl-5 pr-5 mt-3 text-white signin"><b>SIGN IN</b></button>
+            <button class="btn pl-5 pr-5 mt-4 text-white signin create_account"><b>CREATE ACCOUNT</b></button>
+        </form>
+    </div> -->
+
+    <div class="search_close text-white">&Cross;</div>
+
+    <div class="search_bar">
+        <input type="text" placeholder="Enter Keyword..." class="keyword"><a href="#"
+            style="text-decoration: none;"><b><i class="fas fa-search bg-danger text-white keyword_search"></i></b></a>
+    </div>
+
+    <div class="shopping_cart icon_bg">
+        <span class="shopping mt-2">Your shopping cart is empty</span>
+        <span class="p-1 border border-muted night_mode plus">+</span>
+        <span class="p-1 border border-muted night_mode minus">-</span>
+        <span class="shop_price text-danger"></span>
+        <span class="shopping_cart_close night_mode">&Cross;</span>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 lady_finger_content bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/grocery11.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Ladies Finger 500g</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$302</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 brinjal_content bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/grocery12.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Brinjal long 500g</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$200</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 palak_content bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/grocery13.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Palak 250g</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$100</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 packet2_content bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/grocery18.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Himalayan Cashews</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$370</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 packet3_content bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/grocery19.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Kernels Walnuts</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$100</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 packet4_content bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/grocery20.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Himalayan Almonds</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$250</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 packet5_content bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/gfront5.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Yellow Arahar Dal</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$30</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 packet6_content bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/grocery22.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger close1">Tata Sampann Poha</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$170</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 packet7_content bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/gfront7.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Lay's Onion Chips</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$10</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 packet8_content bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/grocery24.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Cadbury Dairy Milk</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$200</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 meat1_content  bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/meatfront1.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Prawns (Big)</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$330</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$250</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 meat2_content  bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/meatfront2.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Silver Belly Fish</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$180</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$150</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 meat3_content  bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/meatfront3.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Prawns Meat (Small)</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$220</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$180</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 bakery1_content  bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/bakery1.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Pista Soan Papdi</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$880</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$850</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 bakery2_content  bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/bakery2.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Karachi Halwa Box</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$290</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$280</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 bakery3_content  bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/bakery3.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Karachi Fruit Cookies</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$120</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$80</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 beverages1_content  bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/beverages1.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Thums Up Soft Drink</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$950</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$90</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 beverages2_content  bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/beverages2.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Coca-Cola-Can</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$700</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$80</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row m-0 p-0">
+        <div class="col-lg-6 beverages3_content  bg-white packet_content">
+            <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div>
+            <div class="row">
+                <div class="col-4 m-0 pl-5">
+                    <img src="images/beverages3.png" alt="" width="100%">
+                </div>
+                <div class="col-8 pl-5">
+                    <h2 class="text-danger ">Fanta PET Bottle</h2>
+                    <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                        aliquip ex ea
+                        commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                        dolore eu fugiat nulla <br>pariatur.</p>
+                    <p class="m-0 p-0" style="cursor: pointer;"><span
+                            class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                    </p>
+                    <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$520</span>
+                        &nbsp;
+                        <big class="add_price"><b><i>$50</i></b></big>
+                    </p>
+                    <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart1 night_mode">Add To
+                            Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluids m-0 p-0 wraper">
+        <!-- <div class="row m-0 p-0 blocks"> -->
+        <!-- <div class="col-lg-12 m-0 p-0 block_div1"> -->
+        <!-- <div class="col-lg-12 m-0 p-0 block_div2"> -->
+        <div class="row m-0 p-0 head ">
+            <div class="col-3 text-center mt-4"><a href="#" style="text-decoration: none;"><big><i
+                            class="fas fa-user user border rounded-circle p-3 icon_bg" data-toggle="modal"
+                            data-target=".form"></i></big></a>
+            </div>
+
+            <div class="col-6 mt-3 text-center">
+                <h1 class="night_mode"><small><b>Grocery Mart</b></small></h1>
+                <p class="night_mode"><small>ONLINE GROCERY SHOPING</small></p>
+            </div>
+            <div class="col-3 text-center mt-4"><a href="#" style="text-decoration: none;"><big><i
+                            class="fas fa-search search night_mode"></i></big>
+                </a> &nbsp;&nbsp;<a href="#" style="text-decoration: none;"><big><i
+                            class="fas fa-shopping-bag rounded-circle p-3 bag"></i></big></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-md sticky-top text-center p-3 nav1">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-6 col-10 text-left">
+                <button class="navbar-toggler bg-danger p-1" data-toggle="collapse" data-target="#menu">
+                    <span class="navbar-toggler-icon menubutton"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item"><a href="index.html"
+                                class="nav-link border-white border-bottom m-0 home1"><b>HOME</b></a>
+                        </li>
+                        &nbsp;&nbsp;
+                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                                data-toggle="dropdown"><b>PRODUCTS</b></a>
+                            <div class="dropdown-menu product_dropdown">
+                                <div class="row m-0 p-0 kitchen">
+                                    <div class="col-lg-3 col-6 m-0 p-0">
+                                        <div class="row m-0 p-0">
+                                            <div class="col-12">
+                                                <h4 class="text-primary">Kitchen</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul type="none">
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Meat
+                                                            and Seafood</a></li>
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Snake
+                                                            Foods</a></li>
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Oils,
+                                                            Vinegars</a></li>
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Pasta
+                                                            & Noodles</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-6 m-0 p-0">
+                                        <div class="row m-0 p-0">
+                                            <div class="col-12">
+                                                <h4 class="text-primary">Household</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul type="none">
+                                                    <li class="nav-item"><a href="product2.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Meat
+                                                            and Seafood</a></li>
+                                                    <li class="nav-item"><a href="product2.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Snake
+                                                            Foods</a></li>
+                                                    <li class="nav-item"><a href="product2.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Oils,
+                                                            Vinegars</a></li>
+                                                    <li class="nav-item"><a href="product2.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Pasta
+                                                            & Noodles</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div><img src="images/grocery25.png" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        &nbsp;&nbsp;
+                        <li class="nav-item"><a href="about.html" class="nav-link about_us"><b>ABOUT
+                                    US</b></a></li>
+                        &nbsp;&nbsp;
+                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                                data-toggle="dropdown"><b>PAGES</b></a>
+                            <div class="dropdown-menu in_dropdown icon_bg">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul type="none">
+                                            <li class="nav-item"><a href="blog_post.html"
+                                                    class="nav-link night_mode pages blog_page1"
+                                                    style="color: red;">Blog Posts</a>
+                                            </li>
+                                            <li class="nav-item"><a href="blog_single.html"
+                                                    class="nav-link text-left night_mode pages blog_page2"
+                                                    style="color: red;">Blog
+                                                    Single</a></li>
+                                            <li class="nav-item"><a href="single_page.html"
+                                                    class="nav-link text-left night_mode pages blog_page3"
+                                                    style="color: red;">Single</a>
+                                            </li>
+                                            <li class="nav-item"><a href="faqs.html"
+                                                    class="nav-link text-left night_mode pages blog_page4"
+                                                    style="color: red;">FAQ's</a></li>
+                                            <li class="nav-item"><a href="#"
+                                                    class="nav-link text-left night_mode pages blog_page5"
+                                                    style="color: red;">ShortCodes</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>&nbsp;&nbsp;
+                        <li class="nav-item"><a href="contact.html" class="nav-link contact_us"><b>CONTACT
+                                    US</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2 text-left m-0 p-0">
+                <b><a style="cursor: pointer;"><big><i class="far fa-moon moon"></i></big></a></b>
+            </div>
+        </nav>
+
+        <div class="home">
+            <div class="row m-0 p-0 mb-5">
+                <div class="col-12 m-0 p-0">
+                    <img src="images/slider2.jpg" class="img1" alt="" width="100%" height="600px">
+                </div>
+            </div>
+            <br><br><br><br><br>
+            <div class="row m-0 p-0 background mb-5">
+                <div class="col-lg-1"></div>
+                <div class="col-md-5 img_content">
+                    <div class="row inside_img">
+                        <div class="col-12">
+                            <p class="para1 text-white">START YOUR DAILY ONLINE SHOPPING!</p>
+                            <p class="head1 text-white h1"><big><b>Stay home & we will <br>deliver your
+                                        daily
+                                        need's</b></big></p><br>
+                            <br>
+                            <button class="btn btn-danger p-3"><b>Shop Now</b></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="images/grocery9.png" id="img2" alt="" class="mb-5" width="100%">
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <br><br><br><br><br><br>
+
+            <div class="row m-0 p-0">
+                <div class="col-1"></div>
+
+                <div class="col-md-5 mb-5"><img src="images/grocery2.avif" class="rounded-lg playbutton_img" alt=""
+                        width="100%">
+                </div>
+                <div class="col-md-5">
+                    <div class="row mb-5 p-0">
+                        <div class="col-md-3 col-4 text-center"><big><a class="vegetable"
+                                    style="text-decoration: none; cursor: pointer;">VEGETABLES</a></big>
+                        </div>
+                        <div class="col-5 text-center"><big><a class="meats heading"
+                                    style="text-decoration: none; cursor: pointer;">MEATS &
+                                    SEAFOOD</a></big></div>
+                        <div class="col-2 text-center"><big><a class="bakery heading"
+                                    style="text-decoration: none; cursor: pointer;">BAKERY</a></big>
+                        </div>
+                        <div class="col-md-2 col-3 text-center"><big><a class="beverages heading"
+                                    style="text-decoration: none; cursor: pointer;">BEVERAGES</a></big>
+                        </div>
+                    </div>
+                    <div class="row m-0 p-0">
+                        <div class="col-4 lady_finger">
+                            <div class="vegetable_content image_bg"><img src="images/grocery11.png"
+                                    class="rounded-top lady_finger_img packet_img " alt="" width="100%">
+                                <a href="content.html" style="text-decoration: none; color: black; cursor: pointer;"
+                                    class="eye eye1"><i class="far fa-eye"></i></a>
+                                <p class="text-danger text-center add_name"><b>LADIES FINGER 500g</b>
+                                </p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                                    &nbsp;
+                                    <big class="add_price"><b><i>$302</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="meat_content image_bg"><img src="images/meatfront1.png"
+                                    class="rounded-top lady_finger_img packet_img" alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye12"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center add_name"><b>Prawns (Big)</b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                                    &nbsp;
+                                    <big class="add_price"><b><i>$250</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="bakery_content image_bg"><img src="images/bakery1.png"
+                                    class="rounded-top lady_finger_img packet_img" alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye15"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center add_name"><b>Pista Soan Papdi</b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$880</span>
+                                    &nbsp;
+                                    <big class="add_price"><b><i>$850</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="beverages_content image_bg"><img src="images/beverages1.png"
+                                    class="rounded-top lady_finger_img packet_img " alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye18"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center add_name"><b>Thums Up Soft drink</b>
+                                </p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$950</span>
+                                    &nbsp;
+                                    <big class="add_price"><b><i>$90</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-4 brinjal image_bg">
+                            <div class="vegetable_content"><img src="images/grocery12.png" alt=""
+                                    class="rounded-top brinjal_img packet_img" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye2"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-center text-danger"><b>BRINJAL LONG 500g</b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$250</span>
+                                    &nbsp;
+                                    <big class="price"><b><i>$200</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="meat_content image_bg"><img src="images/meatfront2.png" alt=""
+                                    class="rounded-top brinjal_img packet_img" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye13"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-center text-danger"><b>Silver Belly Fish</b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$180</span>
+                                    &nbsp;
+                                    <big class="price"><b><i>$150</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+
+                            </div>
+                            <div class="bakery_content image_bg"><img src="images/bakery2.png" alt=""
+                                    class="rounded-top brinjal_img packet_img" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye16"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-center text-danger"><b>Karachi Halwa Box</b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$290</span>
+                                    &nbsp;
+                                    <big class="price"><b><i>$280</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="beverages_content image_bg"><img src="images/beverages2.png" alt=""
+                                    class="rounded-top brinjal_img packet_img" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye19"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-center text-danger"><b>Coca-Cola-Can</b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$700</span>
+                                    &nbsp;
+                                    <big class="price"><b><i>$80</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-4 palak image_bg">
+                            <div class="vegetable_content"><img src="images/grocery13.png" alt=""
+                                    class="rounded-top palak_img packet_img" width="100%"><br>
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye3"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-center text-danger"><b>PALAK 250g</b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$120</span>
+                                    &nbsp;
+                                    <big class="price"><b><i>$100</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="meat_content image_bg"><img src="images/meatfront3.png" alt=""
+                                    class="rounded-top palak_img packet_img" width="100%"><br>
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye14"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-center text-danger"><b>Prawns Meat (Small)</b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$220</span>
+                                    &nbsp;
+                                    <big class="price"><b><i>$180</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="bakery_content image_bg"><img src="images/bakery3.png" alt=""
+                                    class="rounded-top palak_img packet_img" width="100%"><br>
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye17"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-center text-danger"><b>Karachi Fruit Cookies</b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$120</span>
+                                    &nbsp;
+                                    <big class="price"><b><i>$80</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                            <div class="beverages_content image_bg"><img src="images/beverages3.png" alt=""
+                                    class="rounded-top palak_img packet_img" width="100%"><br>
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye20"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-center text-danger"><b>Fanta PET Bottle</b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$520</span>
+                                    &nbsp;
+                                    <big class="price"><b><i>$50</i></b></big>
+                                </p>
+                                <div class="text-center"><button class="p-2 rounded-lg add_to_cart icon_bg">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-1"></div>
+            </div>
+            <br><br><br><br><br>
+            <div class="row m-0 p-0">
+                <div class="col-1">
+                    <a href="images/Jayanti.2021.1080p.AMZN.WEB-DL.DDP5.1.HEVC-ShiNobi.mkv_(1).mp4"><img
+                            src="images/playbutton.png" class="playbutton" alt="" width="100%"></a>
+                </div>
+            </div>
+
+            <div class="row m-0 p-0">
+                <div class="col-md-6 m-0 p-0">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 m-0 p-0">
+                            <img src="images/grocery7.avif" alt="" width="100%" height="400px" class="organic_food_img">
+                        </div>
+                    </div>
+                    <div class="offer">
+                        <div class="row">
+                            <div class="col-12 ml-4 p-0 text-center">
+                                <p class="h4">Summer Offer</p>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-12 text-center ml-4 p-0 ">
+                                <p class="text-dark"><i>Free Delivery</i></p>
+                                <h3 class="text-danger"><b>20% <i>Cashback</b></i></h3>
+                                <p class="text-danger"><small><b>SHOP
+                                            NOW</small><big>&RightArrow;</big></b>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 m-0 p-0">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 m-0 p-0">
+                            <img src="images/grocery8.avif" alt="" width="100%" height="400px" class="organic_food_img">
+                        </div>
+                    </div>
+                    <div class="row organic_food1">
+                        <div class="col-12 text-center">
+                            <p class="bg-dark text-white border border-white rounded-lg ml-5 p-3">
+                                <b>ORGANIC
+                                    FOODS</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><br><br>
+
+            <div class="row m-0 p-0">
+                <div class="col-lg-12 m-0 p-0 text-center">
+                    <span
+                        class="text-danger"><small>&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;</small></span>
+                    <span class="text-center h2 night_mode"><b>Special Deals</b></span>
+                </div>
+            </div><br><br><br>
+            <div class="row m-0 p-0 mb-5">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-6 col-sm-6 right">
+                    <div class="parent">
+                        <div class="row m-0 p-0">
+                            <div class="col-12"><img src="images/grocery14.jpg" class="rounded-lg specialdeals_img1"
+                                    alt="" width="100%" height="320px"></div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row m-0 p-0">
+                        <div class="col-lg-12">
+                            <h3 class="border border-primary rounded-circle bg-primary text-white percent_off">
+                                20%
+                                off</h3>
+                            <h1 class="specialdeals1 text-white col-lg-12 col-md-10 col-sm-8"><b>WE
+                                    OFFER
+                                    <br>&nbsp;&nbsp;&nbsp; BEST PRODUCTS</b></h1>
+                        </div>
+                    </div>
+                    <div class="parent">
+                        <div class="row m-0 p-0">
+                            <div class="col-12"><img src="images/grocery15.jpg" class="rounded-lg specialdeals_img2"
+                                    alt="" width="100%" height="320px"></div>
+                            &nbsp;
+                        </div>
+                    </div>
+                    <div class="row m-0 p-0">
+                        <div class="col-lg-12">
+                            <h1 class="specialdeals2 text-white col-lg-12 col-md-10 col-sm-8"><b>BEST
+                                    STORE
+                                    <br>&nbsp;&nbsp;&nbsp; FOR GROCERIES</b></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-4 left">
+                    <div class="row m-0 p-0">
+                        <img src="images/grocery16.jpg" class="rounded-lg specialdeals_img3" alt="" width="100%"
+                            height="665px">
+                    </div>
+                    <div class="row m-0 p-0">
+                        <div class="col-lg-12 m-0 p-0">
+                            <p class="h1 specialdeals3 text-white">BIG<b>
+                                    DEALS</b><br><b class="text-danger">&nbsp;&nbsp;&nbsp;SAVE
+                                    UP</b><br><small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TO</small><br>
+                                <b
+                                    class="text-danger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30%</b>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1"></div>
+            </div>
+            <br><br>
+            <div class="row m-0 p-0 mt-5">
+                <div class="col-12 text-center product_background top_product">
+                    <span
+                        class="text-danger"><small>&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;</small></span>
+                    <span class="text-center h2 night_mode"><b>Top Products</b></span>
+                </div>
+            </div>
+
+            <div class="col-12 product_background blank"></div>
+            <div class="row m-0 p-0 product_background top_products">
+                <div class="col-12 mb-5">
+                    <div class="row m-0 p-0">
+                        <div class="col-2"></div>
+                        <div class="col-md-2 col-sm-4 packet image_bg">
+                            <div><img src="images/grocery17.png"
+                                    class="rounded-top packet1 packet_img packet_img_top_prod" alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye4"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center"><b><big>ProV Pistachios</big></b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$520</span>
+                                    &nbsp;
+                                    <big><b><i>$500</i></b></big>
+                                </p>
+                                <div class="text-center"><button
+                                        class="p-2 rounded-lg add_to_cart product_background">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-4 packet image_bg">
+                            <div><img src="images/grocery18.png"
+                                    class="rounded-top packet2 packet_img packet_img_top_prod" alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye5"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center"><b><big>Himalayan Cashews</big></b>
+                                </p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$380</span>
+                                    &nbsp;
+                                    <big><b><i>$370</i></b></big>
+                                </p>
+                                <div class="text-center"><button
+                                        class="p-2 rounded-lg add_to_cart product_background">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 packet image_bg">
+                            <div><img src="images/grocery19.png"
+                                    class="rounded-top packet3 packet_img packet_img_top_prod" alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye6"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center"><b><big>Kernels Walnuts</big></b></p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$150</span>
+                                    &nbsp;
+                                    <big><b><i>$100</i></b></big>
+                                </p>
+                                <div class="text-center"><button
+                                        class="p-2 rounded-lg add_to_cart product_background">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 packet image_bg">
+                            <div><img src="images/grocery20.png"
+                                    class="rounded-top packet4 packet_img packet_img_top_prod" alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye7"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center"><b><big>Himalayan Almonds</big></b>
+                                </p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$280</span>
+                                    &nbsp;
+                                    <big><b><i>$250</i></b></big>
+                                </p>
+                                <div class="text-center"><button
+                                        class="p-2 rounded-lg add_to_cart product_background">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                    </div><br>
+                    <div class="row m-0 p-0">
+                        <div class="col-2"></div>
+                        <div class="col-md-2 col-sm-4 packet image_bg">
+                            <div><img src="images/gfront5.png"
+                                    class="rounded-top packet5 packet_img packet_img_top_prod" alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye8"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center"><b><big>Yellow Arahar Dal</big></b>
+                                </p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$40</span>
+                                    &nbsp;
+                                    <big><b><i>$30</i></b></big>
+                                </p>
+                                <div class="text-center"><button
+                                        class="p-2 rounded-lg add_to_cart product_background">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 packet image_bg">
+                            <div><img src="images/grocery22.png"
+                                    class="rounded-top packet6 packet_img packet_img_top_prod" alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye9"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center"><b><big>Tata Sampann Poha</big></b>
+                                </p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$280</span>
+                                    &nbsp;
+                                    <big><b><i>170</i></b></big>
+                                </p>
+                                <div class="text-center"><button
+                                        class="p-2 rounded-lg add_to_cart product_background">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 packet image_bg">
+                            <div><img src="images/gfront7.png"
+                                    class="rounded-top packet7 packet_img packet_img_top_prod" alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye10"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center"><b><big>Lay's Onion Chips</big></b>
+                                </p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$20</span>
+                                    &nbsp;
+                                    <big><b><i>$10</i></b></big>
+                                </p>
+                                <div class="text-center"><button
+                                        class="p-2 rounded-lg add_to_cart product_background">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                                <br>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-4 packet image_bg">
+                            <div><img src="images/grocery24.png"
+                                    class="rounded-top packet8 packet_img packet_img_top_prod" alt="" width="100%">
+                                <a style="text-decoration: none; color: black; cursor: pointer;" class="eye eye11"><i
+                                        class="far fa-eye" data-toggle="modal"
+                                        data-target=".packet_content_prod"></i></a>
+                                <p class="text-danger text-center"><b><big>Cadbury Dairy Milk</big></b>
+                                </p>
+                                <p class="text-center night_mode"><span class="night_mode"
+                                        style="font-weight: lighter; text-decoration: line-through;">$300</span>
+                                    &nbsp;
+                                    <big><b><i>$200</i></b></big>
+                                </p>
+                                <div class="text-center"><button
+                                        class="p-2 rounded-lg add_to_cart product_background">Add
+                                        To
+                                        Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2"></div>
+                    </div>
+                </div>
+            </div><br><br>
+
+
+            <div class="row m-0 p-0">
+                <div class="col-lg-12 text-center pt-5">
+                    <span
+                        class="text-danger"><small>&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;</small></span>
+                    <span class="text-center h2 night_mode"><b>Top Brands</b></span>
+                </div>
+            </div>
+
+            <div class="row m-0 p-0">
+                <div class="col-lg-12 p-4">
+                    <div class="carousel" data-bs-ride="carousel" id="carouselexample">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="col-md-2 col-12 ml-5">
+                                    <div class="card border-0">
+                                        <div class="card-body">
+                                            <img src="images/topbrand1.png" alt="topbrand1" width="100%" class="brand">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>              
+                
+                            <div class="carousel-item ">
+                                <div class="col-md-2 col-12 ml-4">
+                                    <div class="card border-0">
+                                        <div class="card-body">
+                                            <img src="images/topbrand2.png" alt="topbrand2" width="100%" class="brand">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="carousel-item ">
+                                <div class="col-md-2 col-12 ml-5">
+                                    <div class="card border-0">
+                                        <div class="card-body">
+                                            <img src="images/topbrand3.png" alt="topbrand3" width="100%" class="brand">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="carousel-item ">
+                                <div class="col-md-2 col-12 ml-5">
+                                    <div class="card border-0">
+                                        <div class="card-body">
+                                            <img src="images/topbrand4.png" alt="topbrand4" width="100%" class="brand">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="carousel-item ">
+                                <div class="col-md-2 col-12 ml-4">
+                                    <div class="card border-0">
+                                        <div class="card-body">
+                                            <img src="images/topbrand5.png" alt="topbrand5" width="100%" class="brand">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#carouselexample" class="carousel-control-prev" data-slide="prev">
+                            <span class="carousel-control-prev-icon bg-dark"></span>
+                        </a>
+                        <a href="#carouselexample" class="carousel-control-next" data-slide="next">
+                            <span class="carousel-control-next-icon bg-dark"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row newsletter m-0 p-5">
+            <div class="col-lg-6">
+                <div class="row m-0 p-0">
+                    <div class="col-lg-2 col-sm-0"></div>
+                    <div class="col-lg-10">
+                        <p class="h3 text-white"><big><b>Newsletter</b></big></p>
+                    </div>
+                </div>
+                <div class="row m-0 p-0">
+                    <div class="col-lg-2 col-sm-0"></div>
+                    <div class="col-lg-10">
+                        <p class="text-white">Excepteur sint occaecal cupidatal non proident,sunt.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 m-0 p-0">
+                <input type="email" placeholder="Email" class="email border border-primary"><a href="#" class=""><i
+                        class="fas fa-paper-plane plane"></i></a>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="row m-0 p-0">
+            <div class="col-1"></div>
+            <div class="col-lg-2 col-5">
+                <div class="row ">
+                    <div class="col-lg-12 night_mode">
+                        <h3 style="border-bottom: 3px solid blue; width: 60px;">CONTACT</h3>
+                    </div>
+                </div>
+                <br>
+                <div class="row contact">
+                    <div class="col-lg-12 col-10 m-0 p-0 text-left night_mode">
+                        <i class="fas fa-map-marker-alt rounded-circle mb-4 location" style="padding: 10px;"></i>
+                        London
+                        235 Terry,
+                        10001
+                    </div>
+                </div>
+                <div class="row contact">
+                    <div class="col-12 m-0 p-0 text-left ">
+                        <i class="fas fa-envelope p-2 rounded-circle mb-4 location"></i><a href="#"
+                            style="text-decoration: none;" class="text_color night_mode">
+                            info@example.com</a>
+                    </div>
+                </div>
+                <div class="row contact">
+                    <div class="col-12 m-0 p-0 text-left ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-phone-alt p-2 rounded-circle location"></i>
+                            ++44-000-888-999</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-lg-2 col-5">
+                <div class="row">
+                    <div class="night_mode">
+                        <h3 style="border-bottom: 3px solid blue; width: 60px;">INFORMATION</h3>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> About Us</a>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> Contact Us</a>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> Shortcodes</a>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> FAQ's</a>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> Special Products</a> <br><br><br><br>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-lg-2 col-5">
+                <div class="row">
+                    <div class="col-lg-12 night_mode">
+                        <h3 style="border-bottom: 3px solid blue; width: 60px;">CATEGORY</h3>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> Fruits & Vegetables</a>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> Meats & Seafood</a>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> Bakery & Pastry</a>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> Beverages</a>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-lg-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> Breakfast & Dairy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1"></div>
+            <div class="col-lg-2 col-5">
+                <div class="row">
+                    <div class="col-lg-12 night_mode">
+                        <h3 style="border-bottom: 3px solid blue; width: 65px;">PROFILE</h3>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> Home</a>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-12 ">
+                        <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                class="fas fa-angle-right"></i> Today's Deals</a>
+                    </div>
+                </div><br><br>
+                <div class="row">
+                    <div class="col-12">
+                        <h5 class="follow_us">Follow Us</h5>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col-12 m-0 p-0">
+                        <a href="#"><i
+                                class="fab fa-facebook-square rounded-circle p-2 social_clr product_background"></i></a>
+                        <a href="#"><i
+                                class="fab fa-twitter-square rounded-circle p-2 social_clr product_background"></i></a>
+                        <a href="#"><i class="fab fa-linkedin rounded-circle p-2 social_clr product_background"></i></a>
+                        <a href="#"><i
+                                class="fab fa-whatsapp-square rounded-circle p-2 social_clr product_background"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="bg-light line1">
+        <hr class="bg-dark line2"><br>
+        <div class="row m-0 p-0">
+            <div class="col-12 text-center night_mode">
+                &copy; 2021 Grocery Mart. All rights reserved. Design by <a href="#" style="text-decoration: none;"
+                    class="w3layouts">W3Layouts</a>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <!-- </div> -->
+    <script src="links/script.js"></script>
+
+</body>
+
+</html>
