@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/grocery16.jpg">
+    <title>Ecommerce Grocery Mart Project</title>
+    <link rel="stylesheet" href="links/style.css">
+    <link rel="stylesheet" href="links/bootstrap.min.css">
+    <link rel="stylesheet" href="../../FrontEnd/CSS/css/all.min.css">
+    <script src="links/jquery-3.7.1.min.js"></script>
+    <script src="links/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <div class="modal fade form1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form action="#" method="post">
+                        <button class="btn login pr-3"><b>LOGIN</b></button>
+                        <button class="btn register"><b>REGISTER</b></button>
+                        <a href="#" class="close" data-dismiss="modal">&times;</a><br>
+                        <input type="text" placeholder="Name" class="mt-4 mb-0 name icon_bg night_mode" required><br>
+                        <input type="email" placeholder="Email Address" class="mt-0 mb-3 email1 icon_bg night_mode"
+                            required><br>
+                        <input type="password" placeholder="Password" class="mb-3 password icon_bg night_mode"
+                            required><br>
+                        <input type="password" placeholder="Confirm Password"
+                            class="mb-3 confirm_password icon_bg night_mode" required>
+                        <button class="btn pl-5 pr-5 mt-3 text-white signin"><b>SIGN IN</b></button>
+                        <button class="btn pl-5 pr-5 mt-4 text-white signin create_account"><b>CREATE
+                                ACCOUNT</b></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search_close text-white">&Cross;</div>
+
+    <div class="search_bar">
+        <input type="text" placeholder="Enter Keyword..." class="keyword"><a href="#"
+            style="text-decoration: none;"><b><i class="fas fa-search bg-danger text-white keyword_search"></i></b></a>
+    </div>
+
+    <div class="shopping_cart icon_bg">
+        <span class="shopping mt-2">Your shopping cart is empty</span>
+        <span class="p-1 border border-muted night_mode plus">+</span>
+        <span class="p-1 border border-muted night_mode minus">-</span>
+        <span class="shop_price text-danger"></span>
+        <span class="shopping_cart_close night_mode">&Cross;</span>
+    </div>
+
+    <div class="container-fluids wraper m-0 p-0">
+        <div class="row m-0 p-0 head ">
+            <div class="col-3 text-center mt-4"><a href="#" style="text-decoration: none;"><big><i
+                            class="fas fa-user user border rounded-circle p-3 icon_bg" data-toggle="modal"
+                            data-target=".form1"></i></big></a>
+            </div>
+
+            <div class="col-6 mt-3 text-center">
+                <h1 class="night_mode"><small><b>Grocery Mart</b></small></h1>
+                <p class="night_mode"><small>ONLINE GROCERY SHOPING</small></p>
+            </div>
+            <div class="col-3 text-center mt-4"><a href="#" style="text-decoration: none;"><big><i
+                            class="fas fa-search search night_mode"></i></big>
+                </a> &nbsp;&nbsp;<a href="#" style="text-decoration: none;"><big><i
+                            class="fas fa-shopping-bag rounded-circle p-3 bag"></i></big></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-md sticky-top text-center p-3 nav1">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-6 col-10 text-left">
+                <button class="navbar-toggler bg-danger p-1" data-toggle="collapse" data-target="#menu">
+                    <span class="navbar-toggler-icon menubutton"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menu">
+                    <ul class="navbar-nav text-center">
+                        <li class="nav-item"><a href="index.html"
+                                class="nav-link border-white border-bottom m-0 home1"><b>HOME</b></a>
+                        </li>
+                        &nbsp;&nbsp;
+                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                                data-toggle="dropdown"><b>PRODUCTS</b></a>
+                            <div class="dropdown-menu product_dropdown">
+                                <div class="row m-0 p-0 kitchen">
+                                    <div class="col-lg-3 col-6 m-0 p-0">
+                                        <div class="row m-0 p-0">
+                                            <div class="col-12">
+                                                <h4 class="text-primary">Kitchen</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul type="none">
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Meat
+                                                            and Seafood</a></li>
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Snake
+                                                            Foods</a></li>
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Oils,
+                                                            Vinegars</a></li>
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Pasta
+                                                            & Noodles</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-6 m-0 p-0">
+                                        <div class="row m-0 p-0">
+                                            <div class="col-12">
+                                                <h4 class="text-primary">Household</h4>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <ul type="none">
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Meat
+                                                            and Seafood</a></li>
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Snake
+                                                            Foods</a></li>
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Oils,
+                                                            Vinegars</a></li>
+                                                    <li class="nav-item"><a href="product1.html"
+                                                            class="nav-link text-danger product1"
+                                                            style="text-decoration: none;">Pasta
+                                                            & Noodles</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div><img src="images/grocery25.png" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        &nbsp;&nbsp;
+                        <li class="nav-item"><a href="about.html" class="nav-link about_us"><b>ABOUT
+                                    US</b></a></li>
+                        &nbsp;&nbsp;
+                        <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                                data-toggle="dropdown"><b>PAGES</b></a>
+                            <div class="dropdown-menu in_dropdown icon_bg">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <ul type="none">
+                                            <li class="nav-item"><a href="blog_post.html"
+                                                    class="nav-link night_mode pages blog_page1"
+                                                    style="color: red;">Blog Posts</a>
+                                            </li>
+                                            <li class="nav-item"><a href="blog_single.html"
+                                                    class="nav-link text-left night_mode pages blog_page2"
+                                                    style="color: red;">Blog
+                                                    Single</a></li>
+                                            <li class="nav-item"><a href="single_page.html"
+                                                    class="nav-link text-left night_mode pages blog_page3"
+                                                    style="color: red;">Single</a>
+                                            </li>
+                                            <li class="nav-item"><a href="faqs.html"
+                                                    class="nav-link text-left night_mode pages blog_page4"
+                                                    style="color: red;">FAQ's</a></li>
+                                            <li class="nav-item"><a href="#"
+                                                    class="nav-link text-left night_mode pages blog_page5"
+                                                    style="color: red;">ShortCodes</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>&nbsp;&nbsp;
+                        <li class="nav-item"><a href="contact.html" class="nav-link contact_us"><b>CONTACT
+                                    US</b></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-2 text-left m-0 p-0">
+                <b><a style="cursor: pointer;"><big><i class="far fa-moon moon"></i></big></a></b>
+            </div>
+        </nav>
+
+        <div class="row m-0 p-0">
+            <div class="col-lg-6 lady_finger_content bg-white packet_content_product">
+                <!-- <div class="text-muted text-right close1" style="font-size: 30px;">&Cross;</div> -->
+                <div class="row">
+                    <div class="col-4 m-0 pl-5">
+                        <img src="images/grocery11.png" alt="" width="100%">
+                    </div>
+                    <div class="col-8 pl-5">
+                        <h2 class="text-danger ">Ladies Finger 500g</h2>
+                        <p class="text-muted">Ut enim ad minim veniam, quis nostrud exercitation <br>ullamco laboris nisi ut
+                            aliquip ex ea
+                            commodo <br>consequat.Duis aute irure dolor in reprehenderit in <br>voluptate velit esse cillum
+                            dolore eu fugiat nulla <br>pariatur.</p>
+                        <p class="m-0 p-0" style="cursor: pointer;"><span
+                                class="text-primary">&star;&star;&star;</span><span class="text-muted">&star;&star;</span>
+                        </p>
+                        <p class=""><span class="" style="font-weight: lighter; text-decoration: line-through;">$320</span>
+                            &nbsp;
+                            <big class="add_price"><b><i>$302</i></b></big>
+                        </p>
+                        <div class=""><button class="pl-3 pr-3 p-1 mb-5 rounded-lg add_to_cart night_mode">Add To
+                                Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="links/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/grocery16.jpg">
+    <title>Ecommerce Grocery Mart Project</title>
+    <link rel="stylesheet" href="links/style.css">
+    <link rel="stylesheet" href="../../FrontEnd/CSS/css/all.min.css">
+    <link rel="stylesheet" href="links/bootstrap.min.css">
+    <script src="links/jquery-3.7.1.min.js"></script>
+    <script src="links/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="modal fade form"> 
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="btn login pr-3"><b>LOGIN</b></button>
+                    <button class="btn register"><b>REGISTER</b></button>
+                    <a href="#" class="close" data-dismiss="modal">&times;</a><br>
+                    <input type="text" placeholder="Name" class="mt-4 mb-0 name icon_bg night_mode"><br>
+                    <input type="email" placeholder="Email Address" class="mt-0 mb-3 email1 icon_bg night_mode"><br>
+                    <input type="password" placeholder="Password" class="mb-3 password icon_bg night_mode"><br>
+                    <input type="password" placeholder="Confirm Password" class="mb-3 confirm_password icon_bg night_mode">
+                    <button class="btn pl-5 pr-5 mt-3 text-white signin"><b>SIGN IN</b></button>
+                    <button class="btn pl-5 pr-5 mt-4 text-white signin create_account"><b>CREATE ACCOUNT</b></button>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="form ">
+        <form action="#">
+            <div class="text-right close"><a href="#" class="text-muted"
+                    style="text-decoration: none;font-size: 30px;">&Cross;</a></div>
+            <button class="btn  login"><b>LOGIN</b></button>
+            <button class="btn  register"><b>REGISTER</b></button>
+            <input type="text" placeholder="Name" class="name icon_bg mt-4 night_mode">
+            <input type="email" placeholder="Email Address" class="mb-3 mt-3 email icon_bg night_mode">
+            <input type="password" placeholder="Password" class="mb-3 password icon_bg night_mode">
+            <input type="password" placeholder="Confirm Password" class="mb-3 confirm_password icon_bg night_mode">
+            <button class="btn pl-5 pr-5 mt-3 text-white signin"><b>SIGN IN</b></button>
+            <button class="btn pl-5 pr-5 mt-4 text-white signin create_account"><b>CREATE ACCOUNT</b></button>
+        </form>
+    </div> -->
+
+    <div class="search_close text-white">&Cross;</div>
+
+    <div class="search_bar">
+        <input type="text" placeholder="Enter Keyword..." class="keyword"><a href="#"
+            style="text-decoration: none;"><b><i class="fas fa-search bg-danger text-white keyword_search"></i></b></a>
+    </div>
+
+    <div class="shopping_cart icon_bg">
+        <span class="shopping mt-2">Your shopping cart is empty</span>
+        <span class="p-1 border border-muted night_mode plus">+</span>
+        <span class="p-1 border border-muted night_mode minus">-</span>
+        <span class="shop_price text-danger"></span>
+        <span class="shopping_cart_close night_mode">&Cross;</span>
+    </div>
+
+    <div class="container-fluids m-0 p-0 wraper">
+        <!-- <div class="row block_div1 m-0 p-0"> -->
+            <!-- <div class="col-lg-12 m-0 p-0"> -->
+
+                <div class="row m-0 p-0 head ">
+                    <!-- <div class="col-12 block_div2"> -->
+                        <div class="col-3 text-center mt-4"><a href="#" style="text-decoration: none;"><big><i
+                                        class="fas fa-user user border rounded-circle p-3 icon_bg" data-toggle="modal" data-target=".form"></i></big></a>
+                        </div>
+                        <div class="col-6 mt-3 text-center">
+                            <h1 class="night_mode"><small><b>Grocery Mart</b></small></h1>
+                            <p class="night_mode"><small>ONLINE GROCERY SHOPING</small></p>
+                        </div>
+                        <div class="col-3 text-center mt-4"><a href="#" style="text-decoration: none;"><big><i
+                                        class="fas fa-search search night_mode"></i></big>
+                            </a> &nbsp;&nbsp;<a href="#" style="text-decoration: none;"><big><i
+                                        class="fas fa-shopping-bag rounded-circle p-3 bag"></i></big></a>
+                        </div>
+                    </div>
+
+                    <nav class="navbar navbar-expand-md sticky-top text-center p-3 nav1">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-6 col-10 text-left">
+                            <button class="navbar-toggler bg-danger p-1" data-toggle="collapse" data-target="#menu">
+                                <span class="navbar-toggler-icon menubutton"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="menu">
+                                <ul class="navbar-nav text-center">
+                                    <li class="nav-item"><a href="index.html"
+                                            class="nav-link border-white border-bottom m-0 home1"><b>HOME</b></a>
+                                    </li>
+                                    &nbsp;&nbsp;
+                                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                                            data-toggle="dropdown"><b>PRODUCTS</b></a>
+                                        <div class="dropdown-menu product_dropdown">
+                                            <div class="row m-0 p-0 kitchen">
+                                                <div class="col-lg-3 col-6 m-0 p-0">
+                                                    <div class="row m-0 p-0">
+                                                        <div class="col-12">
+                                                            <h4 class="text-primary">Kitchen</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <ul type="none">
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Meat
+                                                                        and Seafood</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Snake
+                                                                        Foods</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Oils,
+                                                                        Vinegars</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Pasta
+                                                                        & Noodles</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-6 m-0 p-0">
+                                                    <div class="row m-0 p-0">
+                                                        <div class="col-12">
+                                                            <h4 class="text-primary">Household</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <ul type="none">
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Meat
+                                                                        and Seafood</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Snake
+                                                                        Foods</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Oils,
+                                                                        Vinegars</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Pasta
+                                                                        & Noodles</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div><img src="images/grocery25.png" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    &nbsp;&nbsp;
+                                    <li class="nav-item"><a href="about.html" class="nav-link about_us"><b>ABOUT
+                                                US</b></a></li>
+                                    &nbsp;&nbsp;
+                                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                                            data-toggle="dropdown"><b>PAGES</b></a>
+                                        <div class="dropdown-menu in_dropdown icon_bg">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <ul type="none">
+                                                        <li class="nav-item"><a href="blog_post.html"
+                                                                class="nav-link night_mode pages blog_page1"
+                                                                style="color: red;">Blog Posts</a>
+                                                        </li>
+                                                        <li class="nav-item"><a href="blog_single.html"
+                                                                class="nav-link text-left night_mode pages blog_page2"
+                                                                style="color: red;">Blog
+                                                                Single</a></li>
+                                                        <li class="nav-item"><a href="single_page.html"
+                                                                class="nav-link text-left night_mode pages blog_page3"
+                                                                style="color: red;">Single</a>
+                                                        </li>
+                                                        <li class="nav-item"><a href="faqs.html"
+                                                                class="nav-link text-left night_mode pages blog_page4"
+                                                                style="color: red;">FAQ's</a></li>
+                                                        <li class="nav-item"><a href="#"
+                                                                class="nav-link text-left night_mode pages blog_page5"
+                                                                style="color: red;">ShortCodes</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>&nbsp;&nbsp;
+                                    <li class="nav-item"><a href="contact.html" class="nav-link contact_us"><b>CONTACT
+                                                US</b></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-2 text-left m-0 p-0">
+                            <b><a style="cursor: pointer;"><big><i class="far fa-moon moon"></i></big></a></b>
+                        </div>
+                    </nav>
+
+                    <div class="about_us_block">
+                        <div class="row m-0 p-0">
+                            <div class="col-lg-12 m-0 p-0">
+                                <img src="images/slider2.jpg" alt="" width="100%" height="300px" class="product_img">
+                            </div>
+                            <div class="row m-0 p-0 showing_content">
+                                <div class="col-lg-12 ">
+                                    <h2 class="text-white"><b>ABOUT US</b></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 p-0">
+                            <div class="col-lg-12 mb-5 m-0 p-0">
+                                <p class="text-center p-3 product_background night_mode"><span class="mr-3"><a
+                                            href="index.html" style="text-decoration: none;"
+                                            class="home1">Home</a></span>/<span class="text-muted ml-3">About</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row m-0 p-0 mt-3">
+                            <div class="col-1"></div>
+                            <div class="col-lg-5 night_mode">
+                                <h2 class="">Best Offers & Best Deals In Our Mart!</h2> <br>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore <br> eu
+                                    fugiat
+                                    nulla
+                                    pariatur. Excepteur sint occaecat cupidatat non proident, <br> sunt in culpa qui
+                                    officia
+                                    deserunt
+                                    mollit
+                                    anim id est laborum. <br> <br>
+
+                                    Sunt in culpa qui officia deserunt mollit anim id est laborum.Duis aute irure <br>
+                                    dolor
+                                    in
+                                    reprehenderit
+                                    in voluptate velit esse cillum dolore eu fugiat nulla <br> ariatur in reprehenderit.
+                                </p>
+                                <button class="btn btn-danger pl-4 pr-4 p-3 rounded-lg"><b>View Our Product</b></button>
+                            </div>
+                            <div class="col-lg-6 mb-5">
+                                <img src="images/about5.jpg" class="rounded-lg" alt="" width="80%">
+                            </div>
+                        </div>
+                        <div class="bg-light">
+                            <div class="row m-0 p-0 mt-5 mb-5">
+                                <div class="col-lg-12 mt-5">
+                                    <p class="text-center">
+                                        <span
+                                            class="text-danger"><small>&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;&HorizontalLine;</small></span>
+                                        <span class="h2"><b>Meet Our Team</b></span>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- box-shadow:  0px 20px 20px rgb(189, 188, 188); -->
+
+                            <div class="row m-0 p-0 mb-5 pb-5">
+                                <div class="col-2"></div>
+                                <div class="col-lg-2 bg-white p-0 ml-4 mb-5"
+                                    style="box-shadow:  0px 10px 30px rgb(189, 188, 188);border-radius: 10px 10px 10px 10px;">
+                                    <img src="images/about1.jpg" alt="" width="100%"
+                                        style="border-radius: 10px 10px 0px 0px;">
+                                    <div class="col-12 m-0 p-0 text-center">
+                                        <a href="#"><i
+                                                class="fab fa-facebook-square rounded-circle p-2 social_clr product_background social_clr_hov1"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-twitter-square rounded-circle p-2 social_clr product_background social_clr_hov2"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-linkedin rounded-circle p-2 social_clr product_background social_clr_hov3"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-whatsapp-square rounded-circle p-2 social_clr product_background social_clr_hov4"></i></a>
+                                    </div>
+                                    <p class="h4 text-center"><b>Olive Yew</b></p>
+                                    <p class="text-center">Title Goes Here</p>
+                                </div>
+                                <div class="col-lg-2 bg-white p-0 ml-4 mb-5"
+                                    style="box-shadow:  0px 10px 30px rgb(189, 188, 188);border-radius: 10px 10px 10px 10px;">
+                                    <img src="images/about2.jpg" alt="" width="100%"
+                                        style="border-radius: 10px 10px 0px 0px;">
+                                    <div class="col-12 m-0 p-0 text-center">
+                                        <a href="#"><i
+                                                class="fab fa-facebook-square rounded-circle p-2 social_clr product_background social_clr_hov1"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-twitter-square rounded-circle p-2 social_clr product_background social_clr_hov2"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-linkedin rounded-circle p-2 social_clr product_background social_clr_hov3"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-whatsapp-square rounded-circle p-2 social_clr product_background social_clr_hov4"></i></a>
+                                    </div>
+                                    <p class="h4 text-center"><b>Aida Joe</b></p>
+                                    <p class="text-center">Title Goes Here</p>
+                                </div>
+                                <div class="col-lg-2 bg-white p-0 ml-4 mb-5"
+                                    style="box-shadow:  0px 10px 30px rgb(189, 188, 188);border-radius: 10px 10px 10px 10px;">
+                                    <img src="images/about3.jpg" alt="" width="100%"
+                                        style="border-radius: 10px 10px 0px 0px;">
+                                    <div class="col-12 m-0 p-0 text-center">
+                                        <a href="#"><i
+                                                class="fab fa-facebook-square rounded-circle p-2 social_clr product_background social_clr_hov1"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-twitter-square rounded-circle p-2 social_clr product_background social_clr_hov2"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-linkedin rounded-circle p-2 social_clr product_background social_clr_hov3"></i></a>
+                                        <a href="#"><i
+                                                class="fab fa-whatsapp-square rounded-circle p-2 social_clr product_background social_clr_hov4"></i></a>
+                                    </div>
+                                    <p class="h4 text-center"><b>Teri Dac</b></p>
+                                    <p class="text-center">Title Goes Here</p>
+                                </div>
+                                <div class="col-lg-2 bg-white p-0 ml-4 mb-5"
+                                    style="box-shadow:  0px 10px 30px rgb(189, 188, 188);border-radius: 10px 10px 10px 10px;">
+                                    <div><img src="images/about4.jpg" alt="" width="100%"
+                                            style="border-radius: 10px 10px 0px 0px;">
+                                        <div class="col-12 m-0 p-0 text-center">
+                                            <a href="#"><i
+                                                    class="fab fa-facebook-square rounded-circle p-2 social_clr product_background social_clr_hov1"></i></a>
+                                            <a href="#"><i
+                                                    class="fab fa-twitter-square rounded-circle p-2 social_clr product_background social_clr_hov2"></i></a>
+                                            <a href="#"><i
+                                                    class="fab fa-linkedin rounded-circle p-2 social_clr product_background social_clr_hov3"></i></a>
+                                            <a href="#"><i
+                                                    class="fab fa-whatsapp-square rounded-circle p-2 social_clr product_background social_clr_hov4"></i></a>
+                                        </div>
+                                        <p class="h4 text-center">Anton Bne</b></p>
+                                        <p class="text-center">Title Goes Here</p>
+                                    </div>
+                                </div>
+                                <div class="col-2"></div>
+                            </div>
+                        </div>
+                        <div class="row m-0 p-0 mb-5">
+                            <div class="col-lg-12 mt-5 mb-3 night_mode">
+                                <h2 class="text-center">Are You Ready For Deals? Flat <span class="text-danger">30%
+                                        Offer</span>
+                                    on
+                                    Mobiles</h2><br>
+                                <p class="text-muted text-center mb-5">Itaque earum rerum hic tenetur a sapiente
+                                    delectus,
+                                    ut
+                                    aut
+                                    reiciendis voluptatibus maiores alias consequatur aut <br> perferendis doloribus
+                                    asperiores
+                                    repellat.</p>
+                                <p class="text-center"><a href="#" style="text-decoration: none;"
+                                        class="text-danger">SHOP
+                                        NOW
+                                        <span><big><b>&rightarrow;</b></big></span></a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row newsletter m-0 p-5">
+                        <div class="col-lg-6">
+                            <div class="row m-0 p-0">
+                                <div class="col-lg-2 col-sm-0"></div>
+                                <div class="col-lg-10">
+                                    <p class="h3 text-white"><big><b>Newsletter</b></big></p>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="col-lg-2 col-sm-0"></div>
+                                <div class="col-lg-10">
+                                    <p class="text-white">Excepteur sint occaecal cupidatal non proident,sunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 m-0 p-0">
+                            <input type="email" placeholder="Email" class="email border border-primary"><a href="#"
+                                class=""><i class="fas fa-paper-plane plane"></i></a>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="row m-0 p-0">
+                        <div class="col-1"></div>
+                        <div class="col-lg-2 col-5">
+                            <div class="row ">
+                                <div class="col-lg-12 night_mode">
+                                    <h3 style="border-bottom: 3px solid blue; width: 60px;">CONTACT</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row contact">
+                                <div class="col-lg-12 col-10 m-0 p-0 text-left night_mode">
+                                    <i class="fas fa-map-marker-alt rounded-circle mb-4 location"
+                                        style="padding: 10px;"></i>
+                                    London
+                                    235 Terry,
+                                    10001
+                                </div>
+                            </div>
+                            <div class="row contact">
+                                <div class="col-12 m-0 p-0 text-left ">
+                                    <i class="fas fa-envelope p-2 rounded-circle mb-4 location"></i><a href="#"
+                                        style="text-decoration: none;" class="text_color night_mode">
+                                        info@example.com</a>
+                                </div>
+                            </div>
+                            <div class="row contact">
+                                <div class="col-12 m-0 p-0 text-left ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-phone-alt p-2 rounded-circle location"></i>
+                                        ++44-000-888-999</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-lg-2 col-5">
+                            <div class="row">
+                                <div class="col-lg-12 night_mode">
+                                    <h3 style="border-bottom: 3px solid blue; width: 60px;">INFORM</h3>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> About Us</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Contact Us</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Shortcodes</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> FAQ's</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Special Products</a> <br><br><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-lg-2 col-5">
+                            <div class="row">
+                                <div class="col-lg-12 night_mode">
+                                    <h3 style="border-bottom: 3px solid blue; width: 60px;">CATEGORY</h3>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Fruits & Vegetables</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Meats & Seafood</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Bakery & Pastry</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Beverages</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Breakfast & Dairy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-lg-2 col-5">
+                            <div class="row">
+                                <div class="col-lg-12 night_mode">
+                                    <h3 style="border-bottom: 3px solid blue; width: 65px;">PROFILE</h3>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Home</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Today's Deals</a>
+                                </div>
+                            </div><br><br>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="follow_us">Follow Us</h5>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-12 m-0 p-0">
+                                    <a href="#"><i
+                                            class="fab fa-facebook-square rounded-circle p-2 social_clr product_background"></i></a>
+                                    <a href="#"><i
+                                            class="fab fa-twitter-square rounded-circle p-2 social_clr product_background"></i></a>
+                                    <a href="#"><i
+                                            class="fab fa-linkedin rounded-circle p-2 social_clr product_background"></i></a>
+                                    <a href="#"><i
+                                            class="fab fa-whatsapp-square rounded-circle p-2 social_clr product_background"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="bg-light line1">
+                    <hr class="bg-dark line2"><br>
+                    <div class="row m-0 p-0">
+                        <div class="col-12 text-center night_mode">
+                            &copy; 2021 Grocery Mart. All rights reserved. Design by <a href="#"
+                                style="text-decoration: none;" class="w3layouts">W3Layouts</a>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+        <!-- </div> -->
+    <!-- </div> -->
+    <script src="links/script.js"></script>
+
+</body>
+
+</html>

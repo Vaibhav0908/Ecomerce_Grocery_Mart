@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/grocery16.jpg">
+    <title>Ecommerce Grocery Mart Project</title>
+    <link rel="stylesheet" href="links/style.css">
+    <link rel="stylesheet" href="links/bootstrap.min.css">
+    <link rel="stylesheet" href="../../FrontEnd/CSS/css/all.min.css">
+    <script src="links/jquery-3.7.1.min.js"></script>
+    <script src="links/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="modal fade form"> 
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="btn login pr-3"><b>LOGIN</b></button>
+                    <button class="btn register"><b>REGISTER</b></button>
+                    <a href="#" class="close" data-dismiss="modal">&times;</a><br>
+                    <input type="text" placeholder="Name" class="mt-4 mb-0 name icon_bg night_mode"><br>
+                    <input type="email" placeholder="Email Address" class="mt-0 mb-3 email1 icon_bg night_mode"><br>
+                    <input type="password" placeholder="Password" class="mb-3 password icon_bg night_mode"><br>
+                    <input type="password" placeholder="Confirm Password" class="mb-3 confirm_password icon_bg night_mode">
+                    <button class="btn pl-5 pr-5 mt-3 text-white signin"><b>SIGN IN</b></button>
+                    <button class="btn pl-5 pr-5 mt-4 text-white signin create_account"><b>CREATE ACCOUNT</b></button>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <div class="search_close text-white">&Cross;</div>
+
+    <div class="search_bar">
+        <input type="text" placeholder="Enter Keyword..." class="keyword"><a href="#"
+            style="text-decoration: none;"><b><i class="fas fa-search bg-danger text-white keyword_search"></i></b></a>
+    </div>
+
+    <div class="shopping_cart icon_bg">
+        <span class="shopping mt-2">Your shopping cart is empty</span>
+        <span class="p-1 border border-muted night_mode plus">+</span>
+        <span class="p-1 border border-muted night_mode minus">-</span>
+        <span class="shop_price text-danger"></span>
+        <span class="shopping_cart_close night_mode">&Cross;</span>
+    </div>
+
+    <div class="container-fluids m-0 p-0 wraper">
+        <!-- <div class="row block_div1 m-0 p-0"> -->
+            <!-- <div class="col-lg-12 m-0 p-0"> -->
+
+                <div class="row m-0 p-0 head ">
+                    <!-- <div class="col-12 block_div2"> -->
+                        <div class="col-3 text-center mt-4"><a href="#" style="text-decoration: none;"><big><i
+                                        class="fas fa-user user border rounded-circle p-3 icon_bg" data-toggle="modal" data-target=".form"></i></big></a>
+                        </div>
+                        <div class="col-6 mt-3 text-center">
+                            <h1 class="night_mode"><small><b>Grocery Mart</b></small></h1>
+                            <p class="night_mode"><small>ONLINE GROCERY SHOPING</small></p>
+                        </div>
+                        <div class="col-3 text-center mt-4"><a href="#" style="text-decoration: none;"><big><i
+                                        class="fas fa-search search night_mode"></i></big>
+                            </a> &nbsp;&nbsp;<a href="#" style="text-decoration: none;"><big><i
+                                        class="fas fa-shopping-bag rounded-circle p-3 bag"></i></big></a>
+                        </div>
+                    </div>
+
+                    <nav class="navbar navbar-expand-md sticky-top text-center p-3 nav1">
+                        <div class="col-lg-4"></div>
+                        <div class="col-lg-6 col-10 text-left">
+                            <button class="navbar-toggler bg-danger p-1" data-toggle="collapse" data-target="#menu">
+                                <span class="navbar-toggler-icon menubutton"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="menu">
+                                <ul class="navbar-nav text-center">
+                                    <li class="nav-item"><a href="index.html"
+                                            class="nav-link border-white border-bottom m-0 home1"><b>HOME</b></a>
+                                    </li>
+                                    &nbsp;&nbsp;
+                                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                                            data-toggle="dropdown"><b>PRODUCTS</b></a>
+                                        <div class="dropdown-menu product_dropdown">
+                                            <div class="row m-0 p-0 kitchen">
+                                                <div class="col-lg-3 col-6 m-0 p-0">
+                                                    <div class="row m-0 p-0">
+                                                        <div class="col-12">
+                                                            <h4 class="text-primary">Kitchen</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <ul type="none">
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Meat
+                                                                        and Seafood</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Snake
+                                                                        Foods</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Oils,
+                                                                        Vinegars</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Pasta
+                                                                        & Noodles</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3 col-6 m-0 p-0">
+                                                    <div class="row m-0 p-0">
+                                                        <div class="col-12">
+                                                            <h4 class="text-primary">Household</h4>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <ul type="none">
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Meat
+                                                                        and Seafood</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Snake
+                                                                        Foods</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Oils,
+                                                                        Vinegars</a></li>
+                                                                <li class="nav-item"><a href="product1.html"
+                                                                        class="nav-link text-danger product1"
+                                                                        style="text-decoration: none;">Pasta
+                                                                        & Noodles</a></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div><img src="images/grocery25.png" alt=""></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    &nbsp;&nbsp;
+                                    <li class="nav-item"><a href="about.html" class="nav-link about_us"><b>ABOUT
+                                                US</b></a></li>
+                                    &nbsp;&nbsp;
+                                    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"
+                                            data-toggle="dropdown"><b>PAGES</b></a>
+                                        <div class="dropdown-menu in_dropdown icon_bg">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <ul type="none">
+                                                        <li class="nav-item"><a href="blog_post.html"
+                                                                class="nav-link night_mode pages blog_page1"
+                                                                style="color: red;">Blog Posts</a>
+                                                        </li>
+                                                        <li class="nav-item"><a href="blog_single.html"
+                                                                class="nav-link text-left night_mode pages blog_page2"
+                                                                style="color: red;">Blog
+                                                                Single</a></li>
+                                                        <li class="nav-item"><a href="single_page.html"
+                                                                class="nav-link text-left night_mode pages blog_page3"
+                                                                style="color: red;">Single</a>
+                                                        </li>
+                                                        <li class="nav-item"><a href="faqs.html"
+                                                                class="nav-link text-left night_mode pages blog_page4"
+                                                                style="color: red;">FAQ's</a></li>
+                                                        <li class="nav-item"><a href="#"
+                                                                class="nav-link text-left night_mode pages blog_page5"
+                                                                style="color: red;">ShortCodes</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>&nbsp;&nbsp;
+                                    <li class="nav-item"><a href="contact.html" class="nav-link contact_us"><b>CONTACT
+                                                US</b></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-2 text-left m-0 p-0">
+                            <b><a style="cursor: pointer;"><big><i class="far fa-moon moon"></i></big></a></b>
+                        </div>
+                    </nav>
+
+                    <div class="blog_single_block">
+                        <div class="row m-0 p-0">
+                            <div class="col-lg-12 m-0 p-0">
+                                <img src="images/slider2.jpg" alt="" width="100%" height="300px" class="product_img">
+                            </div>
+                            <div class="row m-0 p-0 showing_content">
+                                <div class="col-lg-12">
+                                    <h2 class="text-white"><b>BLOG SINGLE</b></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row m-0 p-0">
+                            <div class="col-lg-12 mb-5 m-0 p-0 ">
+                                <p class="text-center p-3 product_background night_mode"><span class="mr-3"><a
+                                            href="index.html" style="text-decoration: none;"
+                                            class="home1">Home</a></span><span class="">/</span><span
+                                        class="text-muted ml-3">Blog Single</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row m-0 p-0 mb-5">
+                            <div class="col-2"></div>
+                            <div class="col-lg-8 m-0 p-0 night_mode">
+                                <img src="images/blog-single1.jpg" alt="" width="100%" class="rounded-lg">
+                                <a href="#" class="h4" style="text-decoration: none;">Groceries</a>
+                                <p class="h2">At vero eos et accusamus et iusto odio dignissimos</p>
+                                <p class="text-muted" style="font-size: 18px;">Lorem ipsum dolor sit amet,Ea
+                                    consequuntur
+                                    illum
+                                    facere aperiam sequi optio consectetur.Ea
+                                    consequuntur illum facere <br> aperiam sequi optio consectetur adipisicing elitFuga,
+                                    suscipit
+                                    totam
+                                    animi consequatur saepe blanditiis.Lorem ipsum dolor sit <br> amet,Ea consequuntur
+                                    illum
+                                    facere
+                                    aperiam sequi optio consectetur adipisicing elit..Lorem ipsum, dolor sit amet
+                                    consectetur
+                                    <br>
+                                    adipisicing elit. At, corrupti odit? At iure facere, porro repellat officia quas,
+                                    dolores
+                                    magnam
+                                    assumenda soluta odit harum <br> voluptate inventore ipsa maiores fugiat accusamus
+                                    eos
+                                    nulla.
+                                    Iure
+                                    voluptatibus explicabo officia. <br><br>
+
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. At, corrupti odit? At iure
+                                    facere,
+                                    porro repellat officia quas, dolores <br> magnam assumenda soluta odit harum
+                                    voluptate
+                                    inventore
+                                    ipsa
+                                    maiores fugiat accusamus eos nulla. Iure voluptatibus <br> explicabo officia.
+                                </p>
+                                <blockquote class="blockquote mt-4 mb-4 p-5 text-muted"
+                                    style="box-shadow: 0px 5px 2px rgb(210, 210, 210); border-left: 3px solid red;font-weight: 600;">
+                                    "Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio
+                                    consectetur.Ea
+                                    consequuntur illum facere aperiam sequi optio consectetur adipisicing elitFuga,
+                                    suscipit
+                                    totam
+                                    animi consequatur."
+                                    <footer class="blockquote-footer text-danger font-weight-bold mt-4">Alexander tony
+                                    </footer>
+                                </blockquote>
+                                <p class="text-muted" style="font-size: 18px;">Excepteur sint occaecat non proident,
+                                    sunt in
+                                    culpa
+                                    quis. Phasellus lacinia id erat eu
+                                    ullamcorper. Nunc id ipsum fringilla, <br> gravida felis vitae. Phasellus lacinia
+                                    id,
+                                    sunt
+                                    in
+                                    culpa
+                                    quis. . <br><br>
+
+                                    Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat
+                                    eu
+                                    ullamcorper. Nunc id ipsum fringilla, <br> gravida felis vitae. Phasellus lacinia
+                                    id,
+                                    sunt
+                                    in
+                                    culpa
+                                    quis. .</p>
+                                <div class="row mb-5 mt-4">
+                                    <div class="col-lg-6">
+                                        <a href="#"><img src="images/blog3.jpg" alt="" width="100%"
+                                                style="border-radius: 10px;"></a>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <a href="#"><img src="images/blog1.jpg" alt="" width="100%"
+                                                style="border-radius: 10px;"></a>
+                                    </div>
+                                </div>
+                                <p class="text-muted" style="font-size: 18px;">Vivamus a ligula quam. Ut blandit eu leo
+                                    non
+                                    suscipit. Anna Delpan In interdum ullamcorper dolor
+                                    eu mattis.Nulla quis lorem <br> neque,Nulla quis lorem neque, mattis venenatis
+                                    lectus.
+                                    Delpan
+                                    Deo In
+                                    interdum ullamcorper dolor eu mattis.Nulla quis lorem <br> neque, mattis venenatis
+                                    lectus.
+                                    Duis
+                                    feugiat tortor sed.Nulla quis lorem neque, mattis venenatis lectus. In interdum
+                                    ullamcorper
+                                    <br>
+                                    dolor eu mattis.Nulla quis lorem neque <br><br>
+
+                                    Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat
+                                    eu
+                                    ullamcorper. Nunc id ipsum fringilla, <br> gravida felis vitae. Phasellus lacinia
+                                    id,
+                                    sunt
+                                    in
+                                    culpa
+                                    quis. . <br><br>
+
+                                    Excepteur sint occaecat non proident, sunt in culpa quis. Phasellus lacinia id erat
+                                    eu
+                                    ullamcorper. Nunc id ipsum fringilla, <br> gravida felis vitae. Phasellus lacinia
+                                    id,
+                                    sunt
+                                    in
+                                    culpa
+                                    quis..
+                                </p>
+                                <p class="h2 mb-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                <p class="text-muted mb-5" style="font-size: 18px;">A ligula quam. Ut blandit eu leo non
+                                    suscipit.
+                                    Anna Delpan In interdum ullamcorper dolor eu
+                                    mattis.Nulla quis lorem <br> neque,Nulla quis lorem neque, mattis venenatis lectus.
+                                    Delpan
+                                    Deo
+                                    In
+                                    interdum ullamcorper dolor eu mattis.Nulla quis lorem <br> neque, mattis venenatis
+                                    lectus.
+                                    Duis
+                                    feugiat tortor sed.Nulla quis lorem neque, mattis venenatis lectus. In interdum
+                                    ullamcorper
+                                    <br>
+                                    dolor eu mattis.Nulla quis lorem neque
+                                </p>
+                                <div class="mb-5">
+                                    <span class="h4">Share this post :</span>
+                                    <a href="#"><i class="fab fa-facebook-square rounded-circle p-2"
+                                            style="background-color: rgb(43, 43, 108);color: white;"></i>
+                                    </a>
+                                    <a href="#"><i class="fab fa-twitter-square rounded-circle p-2 bg-primary"
+                                            style="color: white;"></i>
+                                    </a>
+                                    <a href="#"><i class="fab fa-linkedin rounded-circle p-2"
+                                            style="background-color: rgb(102, 102, 219); color: white;"></i>
+                                    </a>
+                                </div>
+                                <div>
+                                    <hr>
+                                </div>
+                                <div>
+                                    <i class="fas fa-arrow-left text-danger"></i> <a href="#" class="text-danger"
+                                        style="text-decoration: none;">Previous Post</a>
+                                </div>
+                                <div class="mb-5">
+                                    <hr>
+                                </div>
+                                <p class="h4 mb-3">Comments</p>
+                                <div>
+                                    <div class="row border mb-4 pl-4 pr-4 pt-4 pb-2">
+                                        <div class="col-2 m-0 p-0">
+                                            <img src="images/blog_single2.jpg" alt="" class="rounded-circle"
+                                                width="60%">
+                                        </div>
+                                        <div class="col-10 m-0 p-0">
+                                            <p class="font-weight-bold" style="font-size: 18px;">Alexander Smith</p>
+                                            <p style="font-size: 18px;"><span class="mr-4">Oct 10, 2021 - 10:02
+                                                    pm</span><span class="text-danger font-weight-bold"><i
+                                                        class="fas fa-reply"></i>
+                                                    Reply</span>
+                                            </p>
+                                            <p class="text-muted" style="font-size: 18px;">Lorem ipsum dolor sit amet
+                                                consectetur,
+                                                adipisicing elit. Repellat, hic reprehenderit eum cupiditate
+                                                deleniti....
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row border pl-4 pr-4 pt-4 pb-2 mb-5">
+                                        <div class="col-2 m-0 p-0">
+                                            <img src="images/blog_single3.jpg" alt="" class="rounded-circle"
+                                                width="60%">
+                                        </div>
+                                        <div class="col-10 m-0 p-0">
+                                            <p class="font-weight-bold" style="font-size: 18px;">Elizabeth Ker</p>
+                                            <p style="font-size: 18px;"><span class="mr-4">Oct 11, 2021 - 12:30
+                                                    pm</span><span class="text-danger font-weight-bold"><i
+                                                        class="fas fa-reply"></i>
+                                                    Reply</span>
+                                            </p>
+                                            <p class="text-muted" style="font-size: 17px;">Ea consequuntur illum facere
+                                                aperiam
+                                                sequi optio consectetur adipisicing elitFuga, suscipit totam animi
+                                                consequatur.....
+                                            </p>
+                                            <div class="row">
+                                                <div class="col-2 m-0 p-0 mt-3">
+                                                    <img src="images/blog_single4.jpg" alt="" class="rounded-circle"
+                                                        width="70%">
+                                                </div>
+                                                <div class="col-10 m-0 p-0 mt-3">
+                                                    <p class="font-weight-bold" style="font-size: 18px;">Lisa Lindey</p>
+                                                    <p style="font-size: 18px;"><span class="mr-4">Oct 11, 2021 - 14:20
+                                                            pm</span><span class="text-danger font-weight-bold"><i
+                                                                class="fas fa-reply"></i> Reply</span></p>
+                                                    <p class="text-muted" style="font-size: 17px;">At vero eos et
+                                                        accusamus
+                                                        et
+                                                        iusto
+                                                        odio dignissimos ducimus qui blanditiis corrupti quos dolores
+                                                        et.....
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="h4">Add a Comment</p>
+                                <div class="row mb-4">
+                                    <div class="col-lg-6">
+                                        <input type="text" placeholder="Your Name*" class="p-2 border border-muted"
+                                            style="width: 100%; border-radius: 10px; background-color: rgb(241, 241, 241); border: none;">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <input type="email" placeholder="Your Email*" class="p-2 border border-muted"
+                                            style="width: 100%; border-radius: 10px; background-color: rgb(241, 241, 241); border: none;">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <div class="col-12">
+                                        <textarea name="" id="" cols="" rows="5" placeholder="Your Comment*"
+                                            class="p-2 border border-muted"
+                                            style="width: 100%; border-radius: 10px; background-color: rgb(241, 241, 241); border: none;"></textarea>
+                                    </div>
+                                </div>
+                                <button class="btn btn-danger pl-4 pr-4 p-2 rounded-lg font-weight-bold">Post
+                                    Comment</button>
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                    </div>
+
+                    <div class="row newsletter m-0 p-5">
+                        <div class="col-lg-6">
+                            <div class="row m-0 p-0">
+                                <div class="col-lg-2 col-sm-0"></div>
+                                <div class="col-lg-10">
+                                    <p class="h3 text-white"><big><b>Newsletter</b></big></p>
+                                </div>
+                            </div>
+                            <div class="row m-0 p-0">
+                                <div class="col-lg-2 col-sm-0"></div>
+                                <div class="col-lg-10">
+                                    <p class="text-white">Excepteur sint occaecal cupidatal non proident,sunt.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 m-0 p-0">
+                            <input type="email" placeholder="Email" class="email border border-primary"><a href="#"
+                                class=""><i class="fas fa-paper-plane plane"></i></a>
+                        </div>
+                    </div>
+                    <br><br>
+
+                    <div class="row m-0 p-0">
+                        <div class="col-1"></div>
+                        <div class="col-lg-2 col-5">
+                            <div class="row ">
+                                <div class="col-lg-12 night_mode">
+                                    <h3 style="border-bottom: 3px solid blue; width: 60px;">CONTACT</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row contact">
+                                <div class="col-lg-12 col-10 m-0 p-0 text-left night_mode">
+                                    <i class="fas fa-map-marker-alt rounded-circle mb-4 location"
+                                        style="padding: 10px;"></i>
+                                    London
+                                    235 Terry,
+                                    10001
+                                </div>
+                            </div>
+                            <div class="row contact">
+                                <div class="col-12 m-0 p-0 text-left ">
+                                    <i class="fas fa-envelope p-2 rounded-circle mb-4 location"></i><a href="#"
+                                        style="text-decoration: none;" class="text_color night_mode">
+                                        info@example.com</a>
+                                </div>
+                            </div>
+                            <div class="row contact">
+                                <div class="col-12 m-0 p-0 text-left ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-phone-alt p-2 rounded-circle location"></i>
+                                        ++44-000-888-999</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-lg-2 col-5">
+                            <div class="row">
+                                <div class="col-lg-12 night_mode">
+                                    <h3 style="border-bottom: 3px solid blue; width: 60px;">INFORMATION</h3>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> About Us</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Contact Us</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Shortcodes</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> FAQ's</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Special Products</a> <br><br><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-lg-2 col-5">
+                            <div class="row">
+                                <div class="col-lg-12 night_mode">
+                                    <h3 style="border-bottom: 3px solid blue; width: 60px;">CATEGORY</h3>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Fruits & Vegetables</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Meats & Seafood</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Bakery & Pastry</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Beverages</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Breakfast & Dairy</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-lg-2 col-5">
+                            <div class="row">
+                                <div class="col-lg-12 night_mode">
+                                    <h3 style="border-bottom: 3px solid blue; width: 65px;">PROFILE</h3>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Home</a>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-12 ">
+                                    <a href="#" style="text-decoration: none;" class="text_color night_mode"><i
+                                            class="fas fa-angle-right"></i> Today's Deals</a>
+                                </div>
+                            </div><br><br>
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="follow_us">Follow Us</h5>
+                                </div>
+                            </div><br>
+                            <div class="row">
+                                <div class="col-12 m-0 p-0">
+                                    <a href="#"><i
+                                            class="fab fa-facebook-square rounded-circle p-2 social_clr product_background"></i></a>
+                                    <a href="#"><i
+                                            class="fab fa-twitter-square rounded-circle p-2 social_clr product_background"></i></a>
+                                    <a href="#"><i
+                                            class="fab fa-linkedin rounded-circle p-2 social_clr product_background"></i></a>
+                                    <a href="#"><i
+                                            class="fab fa-whatsapp-square rounded-circle p-2 social_clr product_background"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="bg-light line1">
+                    <hr class="bg-dark line2"><br>
+                    <div class="row m-0 p-0">
+                        <div class="col-12 text-center night_mode">
+                            &copy; 2021 Grocery Mart. All rights reserved. Design by <a href="#"
+                                style="text-decoration: none;" class="w3layouts">W3Layouts</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div> -->
+    <!-- </div> -->
+    <script src="links/script.js"></script>
+</body>
+
+</html>
